@@ -3,19 +3,22 @@
     navbar {
         display: flex;
         justify-content: flex-end;
+        align-items: center;
     }
     .topbar {
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        padding: 5vh 0.75vw;
         margin: 0;
         font-size: 12.5px;
     }
+    .topbar-left {
+        justify-content: flex-start;
+        padding: 10px;
+    }
     .topbar-right {
-        display: flex;
         margin-left: auto;
-        align-content: space-around;
+        align-items: center;
     }
 
 
@@ -27,10 +30,6 @@
     }
     navbar li a:hover {
         text-decoration: underline;
-    }
-
-    navbar li {
-        align-self: flex-start;
     }
 
     #apps-img {
@@ -49,21 +48,55 @@
     }
 
     input[type=text] {
-        width: 100%;
+        width: 50%;
         height: 40px;
+        margin-top: 20px;
         border-radius: 25px;
-        border: 1px solid rgba(116, 116, 116, 0.397);
+        border: 1px solid rgba(189, 188, 188, 0.397);
         padding-left: 30px
     }
 
     input[type=text]:hover {
-        box-shadow: 0 0 5px rgb(128, 128, 128);
+        box-shadow: 0 0 5px rgba(128, 128, 128, 0.39);
+        
     }
 
-    form {
-        width: 50%;
-        margin: auto;
+    input[type=text]:focus-visible {
+        outline-style: none;
+        text-align: justify;
     }
+
+
+    #searchbox {
+        display: flex;
+        justify-content: center;
+    }
+    #searchbutton {
+        display: flex;
+        justify-content: center;
+    }
+
+    button {
+        margin: 4% 5px 0 5px;
+        padding: 10px;
+        border: 0px;
+        border-radius: 5px;
+        color: rgb(99, 99, 99)
+
+    }
+    button:hover {
+        box-shadow: 0 2px 2px rgba(128, 128, 128, 0.384);
+        border: rgba(131, 131, 131, 0.274) 1px solid;
+    }
+
+    #logodiv {
+        display:flex;
+        justify-content: center;
+    }
+    #logo {
+        margin-top: 150px;
+    }
+
 
 </style>
 
@@ -78,7 +111,7 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Store</a></li>
             </ul>
-            <ul class="topbar topbar-right">
+            <ul class="topbar-right topbar">
                 <li><a href="#">Gmail</a></li>
                 <li><a href="#">Images</a></li>
                 <li><a href="#"><img id="apps-img" src="apps.png"></a></li>
@@ -86,11 +119,20 @@
 
             </ul>
         </navbar>
-        <div>
-            <form>
+        <form>
+            <div id="logodiv">
+                <img id="logo" src="logo.png">
+            </div>
+
+            <div id="searchbox">
+                <img src="search.png">
                 <input type="text" id="search" for="search">
-            </form>
-        </div>
+            </div>
+            <div id="searchbutton">
+                <button type="button">Google Search</button>
+                <button type="button">I'm Feeling Lucky</button>
+            </div>
+        </form>
     </body>
 </main>
 
