@@ -21,6 +21,39 @@
         align-items: center;
     }
 
+    #footer {
+        display: flex;
+        margin-top: auto;
+        width: 100%;
+        height: auto;
+        background-color: rgb(179, 60, 60);
+    }
+
+    .footer {
+        position: fixed;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        font-size: 12.5px;
+        bottom: 0;
+    }
+
+    .footer > li{
+        padding-left: 10px;
+    } 
+    .footer > li a {
+        text-decoration: none;
+        color:rgb(90, 90, 90);
+    }
+    .footer > li a:hover {
+        text-decoration: underline;
+    }
+    .footer-right {
+        right: 0;
+    }
+    .footer-left {
+    }
+
 
     navbar li a{
         padding: 0.8vw;
@@ -48,17 +81,8 @@
     }
 
     input[type=text] {
-        width: 50%;
-        height: 40px;
-        margin-top: 20px;
-        border-radius: 25px;
-        border: 1px solid rgba(189, 188, 188, 0.397);
-        padding-left: 30px
-    }
-
-    input[type=text]:hover {
-        box-shadow: 0 0 5px rgba(128, 128, 128, 0.39);
-        
+        border: 0px;
+        padding-left: 10px;
     }
 
     input[type=text]:focus-visible {
@@ -69,8 +93,22 @@
 
     #searchbox {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
+        width: 50%;
+        height: 40px;
+        margin-top: 20px;
+        border-radius: 25px;
+        border: 1px solid rgba(189, 188, 188, 0.397);
+        padding-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
     }
+
+    #searchbox:hover {
+        box-shadow: 0 0 5px rgba(128, 128, 128, 0.39);
+    }
+
+
     #searchbutton {
         display: flex;
         justify-content: center;
@@ -95,6 +133,12 @@
     }
     #logo {
         margin-top: 150px;
+    }
+    
+    #searchimg {
+        filter: invert(42%) sepia(86%) saturate(563%) hue-rotate(149deg) brightness(100%) contrast(112%);fill:rgb(99, 99, 99);filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(220deg) brightness(86%) contrast(92%);
+        width: 25px;
+        height: auto;
     }
 
 
@@ -125,7 +169,7 @@
             </div>
 
             <div id="searchbox">
-                <img src="search.png">
+                <img id="searchimg" src="search1.svg">
                 <input type="text" id="search" for="search">
             </div>
             <div id="searchbutton">
@@ -133,6 +177,20 @@
                 <button type="button">I'm Feeling Lucky</button>
             </div>
         </form>
+        <footer>
+            <div id="footer">
+                <ul class="footer footer-left">
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">How Search works</a></li>
+                </ul>
+                <ul class="footer footer-right">
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </div>
+        </footer>
     </body>
 </main>
 
